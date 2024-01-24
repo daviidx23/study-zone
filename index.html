@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Zone</title>
+
+    <!-- FONT -->
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/bedf4baf29.js" crossorigin="anonymous"></script>
+    
+
+    <!-- CSS -->
+    
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <div class="header-h1">
+        <h1>Study Zone <img src="./images/tate.png" alt="tate"></h1>
+        
+    </div>
+    <div class="body-container">
+        <section class="pomodoro">
+            <div class="container">
+                <h1>pomodoro</h1>
+
+                <div class="panel">
+                    <p id="work">work</p>
+                    <p id="break">break</p>
+                </div>
+
+                <div class="timer">
+                    <div class="circle">
+                        <div class="time">
+                            <p id="minutes">25</p>
+                            <p>:</p>
+                            <p id="seconds">00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="start" onclick="start()"><i class="fa-solid fa-play"></i></button>
+
+                    <a id="reset" href="/"><i class="fa-solid fa-arrow-rotate-left"></i></a>
+                </div>
+            </div>
+        </section>
+        <div class="music-todo-container">
+            <section class="music-player">
+                <div class="music-container">
+                    <div class="music-info">
+                        <h4 id="title">Ukelele</h4>
+                        <div class="progress-container">
+                            <div class="progress">
+
+                            </div>
+                        </div>
+                    </div>
+                    <audio src="music/tourner.mp3" id="audio"></audio>
+                    <div class="img-container">
+                        <img src="images/tourner.jpg" id="cover" alt="music-cover">
+
+                    </div>
+                    <div class="navigation">
+                        <button id="prev" class="action-btn" ><i class="fas fa-backward" onclick="prevSong()"></i></button>
+                        <button id="play" class="action-btn action-btn-big" onclick="play()"><i class="fas fa-play"></i></button>
+                        <button id="next" class="action-btn"><i class="fas fa-forward" onclick="nextSong()"></i></button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="todo-app">
+                    <h2>To-Do List</h2>
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Add your text">
+                        <button onclick="addTask()" class="add">Add</button>
+                    </div>
+                    <ul id="list-container">
+                        
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- SCRIPT -->
+    <script src="./script.js"></script>
+</body>
+</html>
